@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee - Coffee House</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #6b4f2f; /* Warna teks netral */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: linear-gradient(45deg, #cfa67d, #f4d3b5);
+            color: #4e342e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #6b4f2f; /* Warna logo */
+        }
+
+        nav a {
+            margin: 0 25px;
+            text-decoration: none;
+            color: #6b4f2f; /* Warna link nav */
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d9776f;
+        }
+
+        main {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .title h1 {
+            font-size: 32px;
+            color: #6b4f2f; /* Warna judul yang lebih gelap */
+            margin: 0 10px; /* Mengatur jarak antara gambar dan teks */
+        }
+
+        .title img {
+            width: 50px; /* Ukuran gambar ikon */
+            height: 50px;
+        }
+
+        /* Kontainer untuk item kopi dengan scrolling horizontal */
+        .coffee-container {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            overflow-x: auto;
+            padding: 20px;
+            gap: 30px;
+            scroll-behavior: smooth;
+            width: 100%;
+        }
+
+        .coffee-item {
+            text-align: center;
+            flex: 0 0 auto;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 230, 201); /* Warna latar belakang item dengan transparansi */
+            border-radius: 15px; /* Sudut membulat */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+            padding: 20px; /* Padding di dalam item */
+            transition: transform 0.3s; /* Efek transisi saat hover */
+        }
+
+        .coffee-item:hover {
+            transform: scale(1.05); /* Efek zoom saat hover */
+        }
+
+        .coffee-item img {
+            width: 230px;
+            height: 280px; /* Ukuran gambar kopi */
+            margin-bottom: 10px;
+            border-radius: 15px;
+        }
+
+        .coffee-item p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #6b4f2f; /* Warna teks item */
+            text-align: center;
+        }
+
+        .coffee-item .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #6b4f2f; /* Warna harga */
+            margin-top: 0px;
+        }
+
+        /* Optional: Adding scrollbar styling */
+        .coffee-container::-webkit-scrollbar {
+            height: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Coffee House</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="create.php">Order</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="title">
+            <img src="coffe1.gif" alt="Coffee Icon">
+            <h1>Our Exquisite Coffee Selection</h1>
+            <img src="coffe1.gif" alt="Coffee Icon">
+        </div>
+
+        <!-- Kontainer untuk item kopi -->
+        <div class="coffee-container">
+            <div class="coffee-item">
+                <img src="coffee1.jpg" alt="Espresso">
+                <p><strong>Espresso</strong></p>
+                <p>A rich and bold shot of coffee, perfect for a quick boost of energy.</p>
+                <p class="price">$3.50</p>
+            </div>
+            <div class="coffee-item">
+                <img src="coffee2.jpg" alt="Latte">
+                <p><strong>Latte</strong></p>
+                <p>Silky steamed milk mixed with espresso, topped with a gentle layer of foam.</p>
+                <p class="price">$4.00</p>
+            </div>
+            <div class="coffee-item">
+                <img src="coffee3.jpg" alt="Cappuccino">
+                <p><strong>Cappuccino</strong></p>
+                <p>A classic mix of equal parts espresso, steamed milk, and foam for a balanced taste.</p>
+                <p class="price">$4.50</p>
+            </div>
+            <div class="coffee-item">
+                <img src="coffee4.jpg" alt="Mocha">
+                <p><strong>Mocha</strong></p>
+                <p>A delightful blend of chocolate, espresso, and steamed milk, perfect for chocolate lovers.</p>
+                <p class="price">$4.80</p>
+            </div>
+            <div class="coffee-item">
+                <img src="coffee5.jpg" alt="Cold Brew">
+                <p><strong>Cold Brew</strong></p>
+                <p>Refreshing and smooth, brewed with cold water for a mellow flavor.</p>
+                <p class="price">$4.20</p>
+            </div>
+            <div class="coffee-item">
+                <img src="coffee6.jpg" alt="Flat White">
+                <p><strong>Flat White</strong></p>
+                <p>Strong espresso topped with velvety microfoam for a creamy texture.</p>
+                <p class="price">$4.70</p>
+            </div>
+            <div class="coffee-item">
+                <img src="coffee7.jpg" alt="Irish Coffee">
+                <p><strong>Irish Coffee</strong></p>
+                <p>A warm, boozy blend of coffee, Irish whiskey, and cream for a cozy treat.</p>
+                <p class="price">$5.00</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

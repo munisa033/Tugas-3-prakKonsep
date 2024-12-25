@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food - Humburgeria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Updated background color */
+            color : #3c3c3c; /* Neutral text color */
+        }
+
+        header {
+            background-color: #ffcc33; /* Updated header background color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #996600; /* Updated nav link color */
+            font-weight: bold;
+        }
+
+        main {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .title h1 {
+            font-size: 28px;
+            color: #cc9900; /* Updated title text color */
+            margin-right: 5px;
+        }
+
+        .title img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Container for burgers with horizontal scrolling */
+        .burger-container {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            overflow-x: auto;
+            padding: 20px;
+            gap: 30px;
+            scroll-behavior: smooth;
+            width: 100%;
+        }
+
+        .burger-item {
+            text-align: center;
+            flex: 0 0 auto;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .burger-item img {
+            width: 230px;
+            height: 150spx;
+            margin-bottom: 10px;
+            border-radius: 15px;
+        }
+
+        .burger-item p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #996600; /* Updated text color */
+            text-align: center;
+        }
+
+        .burger-item .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #cc9900; /* Updated price color */
+            margin-top: 5px;
+        }
+
+        /* Optional: Adding scrollbar styling */
+        .burger-container::-webkit-scrollbar {
+            height: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Humburgeria</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="food.html">Menu</a>
+            <a href="delivery.php">Delivery</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title">
+            <img src="burger.gif" alt="Burger Icon">
+            <h1>Our Juicy Burgers</h1>
+            <img src="burger.gif" alt="Burger Icon">
+        </div>
+
+        <!-- Container for the burgers -->
+        <div class="burger-container">
+            <div class="burger-item">
+                <img src="burger1.jpg" alt="Classic Cheeseburger">
+                <p>Classic Cheeseburger</p>
+                <p class="price">$5.90</p>
+            </div>
+            <div class="burger-item">
+                <img src="burger2.jpg" alt="Bacon Burger">
+                <p>Bacon Burger</p>
+                <p class="price">$6.50</p>
+            </div>
+            <div class="burger-item">
+                <img src="burger3.jpg" alt="Spicy Chicken Burger">
+                <p>Spicy Chicken Burger</p>
+                <p class="price">$6.20</p>
+            </div>
+            <div class="burger-item">
+                <img src="burger4.jpg" alt="Veggie Delight Burger">
+                <p>Veggie Delight Burger</p>
+                <p class="price">$5.50</p>
+            </div>
+            <div class="burger-item">
+                <img src="burger5.jpg" alt="Mushroom Swiss Burger">
+                <p>Mushroom Swiss Burger</p>
+                <p class="price">$6.90</p>
+            </div>
+            <div class="burger-item">
+                <img src="burger6.jpg" alt="Double Patty Burger">
+                <p>Double Patty Burger</p>
+                <p class="price">$7.20</p>
+            </div>
+            <div class="burger-item">
+                <img src="burger7.jpg" alt="BBQ Burger">
+                <p>BBQ Burger</p>
+                <p class="price">$6.80</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

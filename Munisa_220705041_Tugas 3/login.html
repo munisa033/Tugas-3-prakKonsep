@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cupcake House</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(255, 233, 204, 0.9), rgba(255, 232, 206, 0.9)),
+                        url('background.jpg'); /* Coffee-themed background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #6b4f2f; /* Coffee brown text */
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #6b4f2f;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #d2b48c; /* Tan border */
+            border-radius: 5px;
+            font-size: 14px;
+            color: #5c4033; /* Coffee brown color */
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #a0522d; /* Sienna focus */
+            box-shadow: 0 0 5px rgba(160, 82, 45, 0.5);
+        }
+
+        button {
+            width: 100%;
+            background-color: #a0522d; /* Sienna button */
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6b4226; /* Darker coffee brown */
+        }
+
+        .error {
+            color: #d9534f; /* Red error text */
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <div class="error" id="error-message"></div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Example credentials (replace with real authentication mechanism)
+            const validUsername = "nisaa";
+            const validPassword = "12345";
+
+            if (username === validUsername && password === validPassword) {
+                // Redirect to the main page
+                window.location.href = "index.html";
+            } else {
+                errorMessage.textContent = "Invalid username or password!";
+            }
+        }
+    </script>
+</body>
+</html>
